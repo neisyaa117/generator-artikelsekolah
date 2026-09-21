@@ -8,4 +8,4 @@ RUN docker-php-ext-install mysqli pdo pdo_mysql
 
 ENV SERVER_NAME=:80
 
-CMD ["frankenphp", "php-server", "--listen", ":80", "--root", "/app"]
+CMD ["sh", "-c", "frankenphp php-server --listen :${PORT:-80} --root /app"]
